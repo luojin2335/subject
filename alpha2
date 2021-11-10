@@ -1,0 +1,114 @@
+<!--
+  1.text 行内元素 不会换行
+  2.view 块级元素 会换行
+  3.checkbox 复选框
+-->
+<!--<text>1</text>
+<text>2</text>
+<view>3</view>
+<view>4</view>-->
+<!--字符串 数字 bool object类型 在标签中使用 bool类充当属性-->
+<view>{{msg}}</view>
+<view>{{num}}</view>
+<view>是否伪娘：{{isgirl}}</view>
+<view>{{person.age}}</view>
+<view>{{person.height}}</view>
+<view>{{person.weight}}</view>
+<view>{{person.name}}</view>
+<view data-num="{{num}}">自定义</view>
+<view>
+<checkbox checked="{{ischecked}}"></checkbox>
+</view>
+<!--运算 
+      可在花括号中加入表达式 语句
+      表达式：数字运算、字符串拼接、逻辑运算
+      语句：复杂代码段 if,switch,do while,for
+-->
+<view>{{1+1}}</view>
+<view>{{"1+1"}}</view>
+<view>{{10%2==0 ? "偶数":"奇数"}}</view>
+<!--列表循环
+  wx:for="{{数组或对象}}" wx:for-item="循环项的名称" wx:for-index="循环项的索引"
+  wx:key="唯一的值" 用于提高列表渲染性能 
+    wx:key 绑定一个普通字符串时，字符串名称是循环数组中对象的唯一属性
+    wx:key ="this" 表示你的数组是一个普通数组 *this表示循环项
+  出现数组嵌套循环时以下绑定名称不重名
+    wx:for-item="item" wx:for-index="index"
+  默认情况不写
+    wx:for-item="item" wx:for-index="index"
+    小程序也会把循环项名称和索引名称 item index
+    只有一层循环时可省略
+-->
+<view>
+  <view 
+  wx:for="{{list}}" 
+  wx:for-item="item" 
+  wx:for-index="index"
+  wx:key="id"
+   >
+    索引:{{index}}
+    --
+    值:{{item.name}}
+</view>
+</view>
+<!--
+<view>
+  <view 
+  wx:for="{{list}}" 
+  wx:key="id"
+   >
+    索引:{{index}}
+    --
+    值:{{item.name}}
+</view>
+</view>-->
+<!--
+  对象循环
+    wx:for="{{对象}}" wx:for-item="对象的值" wx:for-index="对象的属性"
+    循环对象时最好修改item index 值
+
+<view>
+<view wx:for="{{person}}">
+属性:{{index}}
+--
+值:{{item}}
+</view>
+</view>
+-->
+<!--
+  block 占位标签，写代码时可看到存在，页面渲染小程序会移除
+-->
+<view>
+  <block 
+  wx:for="{{list}}" 
+  wx:for-item="item" 
+  wx:for-index="index"
+  wx:key="id"
+  class="mylist"
+   >
+    索引:{{index}}
+    --
+    值:{{item.name}}
+</block>
+</view>
+<!--
+  条件渲染
+   wx:if="{{true/false}}"
+     if else
+       wx:if  wx:elif wx:else
+  hidden
+    在标签中直接加入属性hidden
+    hidden="{{true}}""
+  什么场景用哪个
+    标签不是频繁使用 优先vx:if
+    标签频繁切换使用 优先hidden
+-->
+<view>
+<view>条件渲染</view>
+<view wx:if="{{true}}">显示</view>
+<view wx:if="{{false}}">隐藏</view>
+<view wx:if="{{true}}">1</view>
+<view wx:elif="{{false}}">2</view>
+<view>-------</view>
+<view hidden>hidden</view>
+</view>
