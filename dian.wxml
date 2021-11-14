@@ -1,0 +1,6 @@
+<view class="head">
+  <image class="a"   src="https://i.loli.net/2021/11/14/x2ourjWFd9mGlcQ.png" />
+  <text  class="text1" >导入文件</text>
+</view>
+<button class="b1">选择文件</button>
+<button class="b2">生成点名表</button>
