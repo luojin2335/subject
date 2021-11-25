@@ -1,0 +1,38 @@
+.a{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 50rpx;
+}
+.head{
+  width: 100%;
+  height: 300rpx;
+  background-color :#3288eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(225, 232, 238);
+  
+  font-size: 80rpx;
+
+}
+.b1{
+  width: 100rpx;
+  height: 130rpx;
+  margin-top: 180rpx;
+  border-radius: 98rpx;
+  font-size: 50rpx;
+  text-align: center;
+}
+.b2{
+  width: 100rpx;
+  height: 130rpx;
+  margin-top: 180rpx;
+  border-radius: 98rpx;
+  font-size: 50rpx;
+  text-align: center;
+  color: rgb(225, 232, 238);
+  background-color: rgb(245, 79, 79);
+}
